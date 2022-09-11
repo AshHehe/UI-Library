@@ -9,7 +9,7 @@ local PlaceName = game:GetService("MarketplaceService"):GetProductInfo(game.Plac
         
     wait(1)
 
-do local GUI = game.CoreGui:FindFirstChild("Darkrai");if GUI then GUI:Destroy();end;if _G.Color == nil then
+do local GUI = game.CoreGui:FindFirstChild("Ash");if GUI then GUI:Destroy();end;if _G.Color == nil then
        _G.Color = Color3.fromRGB(147,112,219)
    end 
 end
@@ -68,17 +68,17 @@ local function MakeDraggable(topbarobject, object)
 	)
 end
 
-local DarkraiX = {}
+local Ashx = {}
 
-function DarkraiX:ToggleUi()
-if game.CoreGui:FindFirstChild("Darkrai").Enabled == true then -- oh am dumb
-game.CoreGui:FindFirstChild("Darkrai").Enabled = false
+function Ashx:ToggleUi()
+if game.CoreGui:FindFirstChild("Ash").Enabled == true then -- oh am dumb
+game.CoreGui:FindFirstChild("Ash").Enabled = false
 else
-game.CoreGui:FindFirstChild("Darkrai").Enabled = true
+game.CoreGui:FindFirstChild("Ash").Enabled = true
 end
 end
 
-function DarkraiX:Window(text,gamenme,logo,keybind)
+function Ashx:Window(text,gamenme,logo,keybind)
     local hubname = text
     local gamename = gamenme
 	local uihide = false
@@ -91,14 +91,14 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	    gamename = ""..PlaceName.Name
     end
 	
-	local Darkrai = Instance.new("ScreenGui") -- guess i am using hubname wrong
-	Darkrai.Name = "Darkrai" -- wait
-	Darkrai.Parent = game.CoreGui
-	Darkrai.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	local Ash = Instance.new("ScreenGui") -- guess i am using hubname wrong
+	Ash.Name = "Ash" -- wait
+	Ash.Parent = game.CoreGui
+	Ash.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 	local Main = Instance.new("Frame")
 	Main.Name = "Main"
-	Main.Parent = Darkrai
+	Main.Parent = Ash
 	Main.ClipsDescendants = true
 	Main.AnchorPoint = Vector2.new(0.5,0.5)
 	Main.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
@@ -1032,4 +1032,4 @@ function DarkraiX:Window(text,gamenme,logo,keybind)
 	end
 	return uitab
 end
-return DarkraiX
+return Ashx
